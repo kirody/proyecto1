@@ -13,6 +13,7 @@ import { HomeComponent } from './componentes/home/home.component';
 import { CochesComponent } from './componentes/coches/coches.component';
 import { PeticionesService } from './servicios/peticiones.service';
 import { HttpClientModule } from '@angular/common/http';
+import { PlantillasComponent } from './componentes/plantillas/plantillas.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { HttpClientModule } from '@angular/common/http';
     Error404Component,
     MenuComponent,
     HomeComponent,
-    CochesComponent
+    CochesComponent,
+    PlantillasComponent
   ],
   imports: [
     BrowserModule,

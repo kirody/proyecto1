@@ -12,6 +12,7 @@ export class CochesComponent implements OnInit {
 
   public coche: Coche;
   public coches:Array<Coche>;
+  public articulos;
 
   constructor(
       private _peticionesService: PeticionesService
@@ -30,11 +31,14 @@ export class CochesComponent implements OnInit {
 
   ngOnInit(): void {
     this._peticionesService.getArticulos().subscribe(
-                                          result => {console.log();},
-                                          error => {var errorMessage = <any>error;
-                                            console.log(errorMessage)
-                                          }
-                                      );
+                                          resultado => {
+                                            this.articulos = resultado;
+                                            
+                                            if(!this.articulos){
+                                              console.log("Error en el servidor");
+                                            }
+                                          },
+                                          error => {console.log(JSON. stringify(error));});
   }
 
 }
