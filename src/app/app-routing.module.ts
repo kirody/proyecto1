@@ -7,6 +7,7 @@ import { Error404Component } from './componentes/error404/error404.component';
 import { HomeComponent } from './componentes/home/home.component';
 import { CochesComponent } from './componentes/coches/coches.component';
 import { PlantillasComponent } from './componentes/plantillas/plantillas.component';
+import { ProductosComponent } from './componentes/productos/productos.component';
 
 
 const routes: Routes = [
@@ -17,6 +18,7 @@ const routes: Routes = [
   {path: 'mostrar', component: MostrarComponent},
   {path: 'coches', component: CochesComponent},
   {path: 'plantillas', component: PlantillasComponent},
+  {path: 'productos', component: ProductosComponent},
   {path: '**', component: Error404Component}
 ];
 

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { GLOBAL } from '../../servicios/global';
 
 @Component({
   selector: 'app-principal',
@@ -6,8 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./principal.component.css']
 })
 export class PrincipalComponent implements OnInit {
+  public header_color: string;
 
-  constructor() { }
+  constructor() {
+    this.header_color = GLOBAL.header_color;
+   }
 
   ngOnInit(): void {
   }

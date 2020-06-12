@@ -14,6 +14,8 @@ import { CochesComponent } from './componentes/coches/coches.component';
 import { PeticionesService } from './servicios/peticiones.service';
 import { HttpClientModule } from '@angular/common/http';
 import { PlantillasComponent } from './componentes/plantillas/plantillas.component';
+import { ProductosComponent } from './componentes/productos/productos.component';
+import { ProductoService } from './servicios/producto.service';
 
 
 @NgModule({
@@ -26,7 +28,8 @@ import { PlantillasComponent } from './componentes/plantillas/plantillas.compone
     MenuComponent,
     HomeComponent,
     CochesComponent,
-    PlantillasComponent
+    PlantillasComponent,
+    ProductosComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +37,8 @@ import { PlantillasComponent } from './componentes/plantillas/plantillas.compone
     FormsModule,
     HttpClientModule,
   ],
-  providers: [PeticionesService],
+  providers: [PeticionesService,
+              ProductoService],
   bootstrap: [PrincipalComponent]
 })
 export class AppModule { }
