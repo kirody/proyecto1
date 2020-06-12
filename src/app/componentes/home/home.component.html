@@ -1,0 +1,17 @@
+<div class="container">
+    <br>
+    En la HOME va a estar el contenido 
+    <br>
+    <span>Fecha: {{fecha | date:'dd/MM/yyyy'}}</span>
+    <br><br>
+    <input type="text" [(ngModel)]="prenda_a_guardar">
+    <button type="button" class="btn btn-primary" (click)="guardarPrenda()">Añadir prenda</button>
+    <p *ngIf="prenda_a_guardar">La prenda a guardar es: <strong>{{prenda_a_guardar}}</strong></p>
+    <h3>Lista de prendas de ropa</h3>
+    <ul>
+        <li *ngFor="let prenda of listado_ropa; let i = index">
+            {{prenda}}
+            <button type="button" class="btn btn-danger" (click)="eliminarPrenda(i)">Eliminar</button>
+        </li>
+    </ul>
+</div>

@@ -1,0 +1,41 @@
+<div class="container">
+    <h3>Componente de coches</h3>
+    <form #formCoche="ngForm" (ngSubmit)="onSubmit(); formCoche.reset();" style="width: 260px">
+        <p>
+            <label for="">Nombre: </label>
+            <input type="text" name="nombre" #nombre="ngModel" [(ngModel)]="coche.nombre" required>
+            <span class="badge badge-pill badge-danger" *ngIf="nombre.touched && !nombre.valid">
+                El nombre del coche es incorrecto
+            </span>
+        </p>
+        <br>
+        <p>
+            <label for="">Caballaje: </label>
+            <input type="text" name="caballaje" #caballaje="ngModel" [(ngModel)]="coche.caballaje" required
+                pattern="[0-9]+">
+            <span class="badge badge-pill badge-danger" *ngIf="caballaje.touched && !caballaje.valid">
+                El caballaje del coche es incorrecto
+            </span>
+
+        </p>
+        <br>
+        <p>
+            <label for="">Color: </label>
+            <input type="text" name="color" #color="ngModel" [(ngModel)]="coche.color" required pattern="[a-zA-Z#]+">
+            <span class="badge badge-pill badge-danger" *ngIf="color.touched && !color.valid">
+                El color del coche es incorrecto
+            </span>
+        </p>
+        <input type="submit" value="Guardar" [disabled]="!formCoche.form.valid">
+    </form>
+<br>
+    <div>
+        <h4>Listado de coches</h4>
+        <ul>
+            <li *ngFor="let coche of coches">
+                {{coche.nombre}} - {{coche.caballaje}} - {{coche.color}}
+            </li>
+        </ul>
+    </div>
+
+</div>
