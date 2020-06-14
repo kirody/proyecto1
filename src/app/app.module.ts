@@ -16,7 +16,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { PlantillasComponent } from './componentes/plantillas/plantillas.component';
 import { ProductosComponent } from './componentes/productos/productos.component';
 import { ProductoService } from './servicios/producto.service';
-
+import { AddProductoComponent } from './componentes/add-producto/add-producto.component';
+import { DetailProductoComponent } from './componentes/detail-producto/detail-producto.component';
+import { EditProductoComponent } from './componentes/edit-producto/edit-producto.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,10 @@ import { ProductoService } from './servicios/producto.service';
     HomeComponent,
     CochesComponent,
     PlantillasComponent,
-    ProductosComponent
+    ProductosComponent,
+    AddProductoComponent,
+    DetailProductoComponent,
+    EditProductoComponent
   ],
   imports: [
     BrowserModule,

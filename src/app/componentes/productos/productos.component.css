@@ -1,0 +1,14 @@
+.producto_imagen{
+    height: 250px;
+    max-width: 100%;
+}
+
+.imagen_relleno{
+    background: #ccc;
+    height: 250px;
+    max-width: 100%;
+}
+
+.btn{
+    margin-right: 6px;
+}

@@ -8,6 +8,9 @@ import { HomeComponent } from './componentes/home/home.component';
 import { CochesComponent } from './componentes/coches/coches.component';
 import { PlantillasComponent } from './componentes/plantillas/plantillas.component';
 import { ProductosComponent } from './componentes/productos/productos.component';
+import { AddProductoComponent } from './componentes/add-producto/add-producto.component';
+import { DetailProductoComponent } from './componentes/detail-producto/detail-producto.component';
+import { EditProductoComponent } from './componentes/edit-producto/edit-producto.component';
 
 
 const routes: Routes = [
@@ -19,6 +22,9 @@ const routes: Routes = [
   {path: 'coches', component: CochesComponent},
   {path: 'plantillas', component: PlantillasComponent},
   {path: 'productos', component: ProductosComponent},
+  {path: 'crear-producto', component: AddProductoComponent},
+  {path: 'producto/:id', component: DetailProductoComponent},
+  {path: 'editar-producto/:id', component: EditProductoComponent},
   {path: '**', component: Error404Component}
 ];
 
